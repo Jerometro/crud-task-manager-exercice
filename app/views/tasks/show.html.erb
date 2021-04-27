@@ -1,0 +1,12 @@
+<h1>Hello from show.html.erb</h1>
+
+<%= @task.title %><br>
+<%= @task.details %><br>
+<%= @task.completed %><br>
+
+<%= link_to "Revenir à la liste", tasks_path %><br>
+<%= link_to "Mettre à jour", edit_task_path %><br>
+<%= link_to "Supprimer #{@task.title}",
+            task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>

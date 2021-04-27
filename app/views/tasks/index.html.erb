@@ -1,0 +1,19 @@
+<h1>Hello from index.html.erb</h1>
+<ul>
+  <% @tasks.each do |task| %>
+<!--     <li><%= link_to task.title, task_path(task) %></li><br> -->
+    <% if task.completed === true %>
+        <li><i class="fas fa-check-square"></i><%= link_to task.title, task_path(task)%></li><br>
+    <% else %>
+        <li><i class="fas fa-square"></i><%= link_to task.title, task_path(task)%></li><br>
+    <% end %>
+
+    <%= task.title %><br>
+    <%= task.details %><br>
+
+  <% end %>
+  <%= link_to "Ajouter une tâche", new_task_path %><br>
+</ul>
+
+
+
